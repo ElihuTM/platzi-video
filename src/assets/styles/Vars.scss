@@ -1,0 +1,37 @@
+// Colors
+$background-image: radial-gradient(
+circle at 20.12% -14.09%, #e457ff 0, #ce4af9 25%,#b53cf2 50%, #9b2feb 75%, #7f25e5 100%
+);
+$color-white: white;
+$color-white-transparent: rgba(255,255,255,0.1);
+
+// Size
+$size-regular: 5rem * .625;
+$size-10px: 1rem * .625;
+$size-border-radius: 2rem * .625;
+
+// media
+$breakpoint-tablet: 768px;
+@media only screen and (min-width: $breakpoint-tablet) {
+	.c-3 {
+		flex: 0 0 calc( 25% - $size-10px);
+	}
+	.c-4 {
+		flex: 0 0 calc( 33.3% - $size-10px  );
+	}
+	.c-6 {
+		flex: 0 0 calc( 50% - $size-10px  );
+	}
+	.c-8 {
+		flex: 0 0 calc( 66.6% - $size-10px  );
+	}
+	.c-9 {
+		flex: 0 0 calc( 75% - $size-10px  );
+	}
+	.c-10 {
+		flex: 0 0 calc( 83.3% - $size-10px  );
+	}
+	.c-12 {
+		flex: 0 0 100%;
+	}
+}

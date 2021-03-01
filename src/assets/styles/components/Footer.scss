@@ -1,0 +1,22 @@
+.footer {
+	@extend .d-flex, .align-items-center;
+	height: $size-regular * 2;
+	width: 100%;
+
+	a {
+		color: $color-white;
+		cursor: pointer;
+		padding-left: $size-10px * 3;
+		text-decoration: none;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+}
+
+@media only screen and (max-width: $breakpoint-tablet) {
+	.footer {
+		flex-direction: column;
+	}
+}

@@ -1,0 +1,21 @@
+.search {
+	@extend .d-flex, .flex-column, .justify-content-center, .align-items-center;
+
+	padding-top: $size-regular;
+
+	&__title {
+		font-weight: 400;
+	}
+
+	&__input {
+		background-color: $color-white-transparent;
+		border: 2px solid $color-white;
+		border-radius: $size-border-radius;
+		height: $size-regular;
+		color: $color-white;
+		margin-bottom: $size-regular;
+		padding: 0 ($size-regular / 2);
+		outline: none;
+		width: 70%;
+	}
+}

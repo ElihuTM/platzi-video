@@ -1,0 +1,20 @@
+@import "~bootstrap/scss/bootstrap";
+@import "./Vars.scss";
+@import "./components/Header.scss";
+@import "./components/Search.scss";
+@import "./components/Footer.scss";
+@import "./components/Carousel.scss";
+@import "./components/CarouselItem.scss";
+
+body {
+	background-image: $background-image;
+}
+
+h1, h2, h3 {
+	color: $color-white;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
