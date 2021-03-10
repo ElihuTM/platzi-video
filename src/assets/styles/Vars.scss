@@ -1,7 +1,24 @@
 // Colors
-$background-image: radial-gradient(
-circle at 20.12% -14.09%, #e457ff 0, #ce4af9 25%,#b53cf2 50%, #9b2feb 75%, #7f25e5 100%
+$background-color: #FF3CAC;
+$background-gradient: linear-gradient(
+225deg,
+#FF3CAC 0%,
+#784BA0 50%,
+#2B86C5 100%
 );
+
+/*
+$background-color: rgb(0,168,255);
+$background-gradient: linear-gradient(
+180deg,
+rgba(0,168,255,1) 10%,
+rgba(114,226,255,1) 50%,
+rgba(144,232,254,1) 85%,
+rgba(250,252,252,1) 100%
+);
+ */
+
+$color-black: black;
 $color-white: white;
 $color-white-transparent: rgba(255,255,255,0.1);
 

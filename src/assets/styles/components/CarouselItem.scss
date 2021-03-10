@@ -1,5 +1,5 @@
 .carousel-item {
-	@extend .c-3;
+	flex: 0 0 calc(25% - $size-10px);
 	border-radius: $size-border-radius;
 	overflow: hidden;
 	position: relative;

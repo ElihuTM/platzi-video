@@ -5,160 +5,51 @@ import Search from '../components/Search'
 import Footer from '../components/Footer'
 import Carousel from '../components/Carousel'
 import CarouselItem from '../components/CarouselItem'
+import shortid from 'shortid'
 
 class Home extends React.Component {
+	constructor(props) {
+		super(props)
+		this.API = 'http://localhost:3000/initalState'
+		this.state = {
+			videos: {
+				mylist: [],
+				originals: [],
+				trends: [],
+			},
+		}
+	}
+
+	componentDidMount() {
+		fetch(this.API)
+			.then(response => response.json())
+			.then(data => this.setState({
+				videos: data,
+			}))
+	}
+
 	render() {
 		return (
 			<Container>
 				<Header />
 				<Search />
 
-				<Carousel title='milista'>
-					<CarouselItem
-						title='In the Dark'
-						year={2009}
-						contentRating='16+'
-						duration={164}
-						cover='http://dummyimage.com/800x600.png/99118E/ffffff'
-					/>
-					<CarouselItem
-						title='In the Dark'
-						year={2009}
-						contentRating='16+'
-						duration={164}
-						cover='http://dummyimage.com/800x600.png/99118E/ffffff'
-					/>
-					<CarouselItem
-						title='In the Dark'
-						year={2009}
-						contentRating='16+'
-						duration={164}
-						cover='http://dummyimage.com/800x600.png/99118E/ffffff'
-					/>
-					<CarouselItem
-						title='In the Dark'
-						year={2009}
-						contentRating='16+'
-						duration={164}
-						cover='http://dummyimage.com/800x600.png/99118E/ffffff'
-					/>
-
-					<CarouselItem
-						title='In the Dark'
-						year={2009}
-						contentRating='16+'
-						duration={164}
-						cover='http://dummyimage.com/800x600.png/99118E/ffffff'
-					/>
-					<CarouselItem
-						title='In the Dark'
-						year={2009}
-						contentRating='16+'
-						duration={164}
-						cover='http://dummyimage.com/800x600.png/99118E/ffffff'
-					/>
-					<CarouselItem
-						title='In the Dark'
-						year={2009}
-						contentRating='16+'
-						duration={164}
-						cover='http://dummyimage.com/800x600.png/99118E/ffffff'
-					/>
-					<CarouselItem
-						title='In the Dark'
-						year={2009}
-						contentRating='16+'
-						duration={164}
-						cover='http://dummyimage.com/800x600.png/99118E/ffffff'
-					/>
-					<CarouselItem
-						title='In the Dark'
-						year={2009}
-						contentRating='16+'
-						duration={164}
-						cover='http://dummyimage.com/800x600.png/99118E/ffffff'
-					/>
-					<CarouselItem
-						title='In the Dark'
-						year={2009}
-						contentRating='16+'
-						duration={164}
-						cover='http://dummyimage.com/800x600.png/99118E/ffffff'
-					/>
+				<Carousel title='my list'>
+					{this.state.videos.mylist.map(item =>
+					<CarouselItem key={shortid.generate()} {...item}/>
+					)}
 				</Carousel>
 
-				<Carousel title='mi lista'>
-					<CarouselItem
-						title='In the Dark'
-						year={2009}
-						contentRating='16+'
-						duration={164}
-						cover='http://dummyimage.com/800x600.png/99118E/ffffff'
-					/>
-					<CarouselItem
-						title='In the Dark'
-						year={2009}
-						contentRating='16+'
-						duration={164}
-						cover='http://dummyimage.com/800x600.png/99118E/ffffff'
-					/>
-					<CarouselItem
-						title='In the Dark'
-						year={2009}
-						contentRating='16+'
-						duration={164}
-						cover='http://dummyimage.com/800x600.png/99118E/ffffff'
-					/>
-					<CarouselItem
-						title='In the Dark'
-						year={2009}
-						contentRating='16+'
-						duration={164}
-						cover='http://dummyimage.com/800x600.png/99118E/ffffff'
-					/>
+				<Carousel title='originals'>
+					{this.state.videos.originals.map(item =>
+					<CarouselItem key={shortid.generate()} {...item}/>
+					)}
+				</Carousel>
 
-					<CarouselItem
-						title='In the Dark'
-						year={2009}
-						contentRating='16+'
-						duration={164}
-						cover='http://dummyimage.com/800x600.png/99118E/ffffff'
-					/>
-					<CarouselItem
-						title='In the Dark'
-						year={2009}
-						contentRating='16+'
-						duration={164}
-						cover='http://dummyimage.com/800x600.png/99118E/ffffff'
-					/>
-					<CarouselItem
-						title='In the Dark'
-						year={2009}
-						contentRating='16+'
-						duration={164}
-						cover='http://dummyimage.com/800x600.png/99118E/ffffff'
-					/>
-					<CarouselItem
-						title='In the Dark'
-						year={2009}
-						contentRating='16+'
-						duration={164}
-						cover='http://dummyimage.com/800x600.png/99118E/ffffff'
-					/>
-					<CarouselItem
-						title='In the Dark'
-						year={2009}
-						contentRating='16+'
-						duration={164}
-						cover='http://dummyimage.com/800x600.png/99118E/ffffff'
-					/>
-					<CarouselItem
-						title='In the Dark'
-						year={2009}
-						contentRating='16+'
-						duration={164}
-						cover='http://dummyimage.com/800x600.png/99118E/ffffff'
-					/>
+				<Carousel title='trends'>
+					{this.state.videos.trends.map(item =>
+					<CarouselItem key={shortid.generate()} {...item}/>
+					)}
 				</Carousel>
 				<Footer />
 			</Container>
