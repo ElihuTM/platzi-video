@@ -10,7 +10,6 @@ import shortid from 'shortid'
 class Home extends React.Component {
 	constructor(props) {
 		super(props)
-		this.API = 'http://localhost:3000/initalState'
 		this.state = {
 			videos: {
 				mylist: [],
@@ -20,12 +19,13 @@ class Home extends React.Component {
 		}
 	}
 
-	componentDidMount() {
-		fetch(this.API)
-			.then(response => response.json())
-			.then(data => this.setState({
-				videos: data,
-			}))
+	async componentDidMount() {
+		const response = await fetch(process.env.REACT_APP_FAKE_API)
+		const data = await response.json()
+
+		this.setState({
+			videos: data,
+		})
 	}
 
 	render() {
@@ -34,23 +34,14 @@ class Home extends React.Component {
 				<Header />
 				<Search />
 
-				<Carousel title='my list'>
-					{this.state.videos.mylist.map(item =>
+				{Object.keys(this.state.videos).map(name =>
+				<Carousel title={name} key={shortid.generate()}>
+					{this.state.videos[name].map(item =>
 					<CarouselItem key={shortid.generate()} {...item}/>
 					)}
 				</Carousel>
+				)}
 
-				<Carousel title='originals'>
-					{this.state.videos.originals.map(item =>
-					<CarouselItem key={shortid.generate()} {...item}/>
-					)}
-				</Carousel>
-
-				<Carousel title='trends'>
-					{this.state.videos.trends.map(item =>
-					<CarouselItem key={shortid.generate()} {...item}/>
-					)}
-				</Carousel>
 				<Footer />
 			</Container>
 		)

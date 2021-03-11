@@ -1,0 +1,31 @@
+.login {
+	@extend .d-flex, .align-items-center, .flex-column, .justify-content-center;
+	padding: 0px ($size-10px * 3);
+	min-height: calc(100vh - ($size-100px * 2));
+
+	&__container {
+		@extend .d-flex, .flex-column, .justify-content-around;
+		background-color: $color-black-transparent;
+		border: 2px solid $color-white;
+		border-radius: $size-border-radius * 2;
+		box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+		color: $color-white;
+		height: $size-100px * 7;
+		max-width: $breakpoint-tablet;
+		padding: 60px 68px 40px;
+	}
+}
+
+::placeholder {
+	color: white;
+}
+
+@media only screen and (max-width: 600px) {
+	.login__container {
+		background-color: transparent;
+		border: none;
+		box-shadow: none;
+		padding: 0px;
+		width: 100%;
+	}
+}

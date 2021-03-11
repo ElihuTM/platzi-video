@@ -1,13 +1,21 @@
 @import "~bootstrap/scss/bootstrap";
 @import "./Vars.scss";
+
 @import "./components/Header.scss";
-@import "./components/Search.scss";
 @import "./components/Footer.scss";
-@import "./components/Carousel.scss";
-@import "./components/CarouselItem.scss";
+
+@import "./components/home/Search.scss";
+@import "./components/home/Carousel.scss";
+@import "./components/home/CarouselItem.scss";
+
+@import "./components/login/LoginContainer.scss";
+@import "./components/login/LoginForm.scss";
+@import "./components/login/LoginSocialMedia.scss";
+
+@import "./components/register/RegisterContainer.scss";
 
 body {
-	background: $background-color;
+	background: $background-main-color;
 	background: $background-gradient;
 }
 
