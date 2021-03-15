@@ -1,4 +1,5 @@
 import React from 'react'
+import RegisterForm from '../components/RegisterForm'
 
 class Register extends React.Component {
 	render() {
@@ -6,12 +7,7 @@ class Register extends React.Component {
 			<section className="register">
 				<section className="register__container">
 					<h2>Regístrate</h2>
-					<form className="register__container--form">
-						<input className="input" type="text" placeholder="Nombre"/>
-						<input className="input" type="text" placeholder="Correo"/>
-						<input className="input" type="password" placeholder="Contraseña"/>
-						<button className="button">Registrarme</button>
-					</form>
+					<RegisterForm/>
 					<a href="">Iniciar sesión</a>
 				</section>
 			</section>

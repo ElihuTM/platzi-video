@@ -1,0 +1,11 @@
+.register__form {
+	@extend .d-flex, .flex-column;
+
+	&--input {
+		@extend .form-input;
+	}
+
+	&--button {
+		@extend .form-button;
+	}
+}
