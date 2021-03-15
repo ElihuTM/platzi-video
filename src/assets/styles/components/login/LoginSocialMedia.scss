@@ -2,7 +2,7 @@
 	div {
 		@extend .d-flex, .align-items-center;
 		font-size: 14px;
-		margin-bottom: $size-10px;
+		margin: $size-10px 0;
 
 		img {
 			margin-right: $size-10px;

@@ -1,0 +1,13 @@
+.not-found {
+	@extend .text-center;
+	height: 72vh;
+
+	a {
+		font-size: $size-regular / 2;
+		color: $color-white;
+	}
+
+	a:hover {
+		text-decoration: none;
+	}
+}

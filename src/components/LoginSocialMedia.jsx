@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import googleIcon from '../assets/static/google-icon.png'
 import twitterIcon from '../assets/static/twitter-icon.png'
 
@@ -11,7 +12,7 @@ const LoginSocialMedia = () => (
 			<img src={twitterIcon} alt='twitter icon'/> Inicia sesión con Twitter
 		</div>
 		<p className="login__social-media--register">
-			No tienes ninguna cuenta <a href='/'>Regístrate</a>
+			No tienes ninguna cuenta <Link to='/register'>Regístrate</Link>
 		</p>
 	</section>
 )

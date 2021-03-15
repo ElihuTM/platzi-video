@@ -1,5 +1,6 @@
 import React from 'react'
 import RegisterForm from '../components/RegisterForm'
+import { Link } from 'react-router-dom'
 
 class Register extends React.Component {
 	render() {
@@ -8,7 +9,9 @@ class Register extends React.Component {
 				<section className="register__container">
 					<h2>Regístrate</h2>
 					<RegisterForm/>
-					<a href="">Iniciar sesión</a>
+					<Link to='/login'>
+						Iniciar sesión
+					</ Link>
 				</section>
 			</section>
 		)

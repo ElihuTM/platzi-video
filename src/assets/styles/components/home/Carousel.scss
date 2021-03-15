@@ -14,7 +14,6 @@
 	&__container {
 		@extend .d-flex, .flex-nowrap;
 		transition: 450ms transform, 450ms -webkit-transform;
-		font-size: 0;
 		white-space: nowrap;
 		margin: ($size-10px * 7) 0;
 		padding-bottom: $size-10px;
