@@ -8,7 +8,7 @@ class Register extends React.Component {
 			<section className="register">
 				<section className="register__container">
 					<h2>Regístrate</h2>
-					<RegisterForm/>
+					<RegisterForm {...this.props}/>
 					<Link to='/login'>
 						Iniciar sesión
 					</ Link>

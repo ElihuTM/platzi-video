@@ -57,6 +57,6 @@ const LoginForm = (props) => {
 }
 
 const mapDispatchToProps = {
-	loginRequest
+	loginRequest,
 }
 export default connect(null, mapDispatchToProps)(LoginForm)

@@ -15,6 +15,12 @@ export const loginRequest = payload => ({
 	payload,
 })
 
+export const registerRequest = payload => ({
+	type: actionTypes.registerRequest,
+	payload,
+})
+
 export const logoutRequest = () => ({
 	type: actionTypes.logoutRequest,
 })
+

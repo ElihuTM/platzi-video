@@ -2,6 +2,11 @@ import { actionTypes } from '../utils/actionTypes'
 
 const reducer = (state, action) => {
 	switch(action.type) {
+		case actionTypes.registerRequest:
+			return {
+				...state,
+				user: action.payload,
+			}
 		case actionTypes.logoutRequest:
 			return {
 				...state,

@@ -26,7 +26,7 @@ const Header = (props) => {
 					<p> Perfil </p>
 				</div>
 				<ul>
-					{hasUser && <li><Link to='/'> Cuenta </Link></li>}
+					{hasUser && <li><Link to='/'> {user.name} </Link></li>}
 					{(hasUser)
 						? <li><Link to='/login' onClick={handleLogout}>
 							Logout
@@ -43,7 +43,7 @@ const Header = (props) => {
 }
 
 Header.propTypes = {
-	user: PropTypes.string,
+	user: PropTypes.object,
 }
 
 const mapStateToProps = state => ({
