@@ -13,7 +13,7 @@ const Carousel = ({children, title}) => (
 )
 
 Carousel.propTypes = {
-	title: PropTypes.string,
+	title: PropTypes.object,
 }
 
 export default Carousel

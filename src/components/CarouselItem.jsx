@@ -69,6 +69,8 @@ const CarouselItem = (props) => {
 }
 
 CarouselItem.propTypes = {
+	id: PropTypes.number,
+	isList: PropTypes.bool,
 	cover: PropTypes.string,
 	title: PropTypes.string,
 	year: PropTypes.number,

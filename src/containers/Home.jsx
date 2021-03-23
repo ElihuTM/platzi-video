@@ -11,19 +11,30 @@ class Home extends React.Component {
 		return (
 			<React.Fragment>
 				<Search />
-				{Object.keys(this.props.videos).map(name =>
-				<Carousel title={name} key={shortid.generate()}>
-					{(name !== 'myList' && this.props.videos[name].length === 0)
-						? <Spinner animation='border' variant='light'/>
-						: this.props.videos[name].map( item =>
-						<CarouselItem
+
+				<Carousel title='My list'>
+					{this.props.myList.map (
+						item => <CarouselItem
 							key={shortid.generate()}
 							{...item}
-							isList={name === 'myList'}
-						/>)
-					}
+							isList
+						/>
+					)}
 				</Carousel>
-				)}
+
+				{Object.keys(this.props.videos).map(name => (
+					<Carousel title={name} key={shortid.generate()}>
+						{(this.props.videos[name].length === 0)
+							? <Spinner animation='border' variant='light'/>
+							: this.props.videos[name].map( item => (
+								<CarouselItem
+									key={shortid.generate()}
+									{...item}
+								/>
+							))
+						}
+					</Carousel>
+				))}
 			</React.Fragment>
 		)
 	}
@@ -31,6 +42,7 @@ class Home extends React.Component {
 
 const mapStateToProps = state => ({
 	videos: state.videos,
+	myList: state.myList,
 })
 
 export default connect(mapStateToProps, null)(Home)

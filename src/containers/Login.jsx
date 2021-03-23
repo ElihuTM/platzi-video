@@ -8,7 +8,7 @@ class Login extends React.Component {
 			<section className="login">
 				<section className="login__container">
 					<h2>Inicia sesión</h2>
-					<LoginForm />
+					<LoginForm {...this.props}/>
 					<LoginSocialMedia />
 				</section>
 			</section>

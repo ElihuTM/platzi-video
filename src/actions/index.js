@@ -1,9 +1,20 @@
+import { actionTypes } from '../utils/actionTypes'
+
 export const setFavorite = payload => ({
-	type: 'SET_FAVORITE',
+	type: actionTypes.setFavorite,
 	payload,
 })
 
 export const deleteFavorite = payload => ({
-	type: 'DELETE_FAVORITE',
+	type: actionTypes.deleteFavorite,
 	payload,
+})
+
+export const loginRequest = payload => ({
+	type: actionTypes.loginRequest,
+	payload,
+})
+
+export const logoutRequest = () => ({
+	type: actionTypes.logoutRequest,
 })

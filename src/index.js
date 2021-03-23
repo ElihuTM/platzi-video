@@ -10,8 +10,8 @@ import './assets/styles/App.scss'
 const initialState = {
 	"user": {},
 	"playing": {},
+	"myList" : [],
 	"videos": {
-		"myList": [],
 		"trends": [
 			{
 				"id": 2,
