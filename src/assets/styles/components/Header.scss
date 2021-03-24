@@ -41,6 +41,8 @@
 			img {
 				margin-right: $size-regular / 10;
 				width: $size-regular;
+				border-radius: 100%;
+				object-fit: cover;
 			}
 			p {
 				margin: 0;

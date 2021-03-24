@@ -24,3 +24,11 @@ export const logoutRequest = () => ({
 	type: actionTypes.logoutRequest,
 })
 
+export const getVideoSource = payload => ({
+	type: actionTypes.getVideoSource,
+	payload,
+})
+
+export const resetVideoSource = () => ({
+	type: actionTypes.resetVideoSource,
+})
